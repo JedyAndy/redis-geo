@@ -22,7 +22,7 @@ namespace RedisGeo
             container.Register<IRedisClientsManager>(c =>
                 new RedisManagerPool(AppSettings.Get("REDIS_HOST", defaultValue:"localhost")));
 
-            ImportCountry(container.Resolve<IRedisClientsManager>(), "US");
+            //ImportCountry(container.Resolve<IRedisClientsManager>(), "US");
         }
 
         public void ImportCountry(IRedisClientsManager redisManager, string countryCode)
